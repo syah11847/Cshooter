@@ -1,0 +1,1327 @@
+activity.setContentView(loadlayout(layout))
+--activity.actionBar.hide()
+activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+
+winlay = {
+  LinearLayout,
+  layout_width = "-1",
+  layout_height = "-1",
+  background = "transparent",
+  orientation = "vertical",
+  {
+    LinearLayout,
+    orientation = "horizontal",
+    layout_gravity = "center",
+    layout_height = "3.5%h",
+    layout_width = "30%w",
+    gravity = "center",
+    background = "transparent",
+    id = "win_move",
+    {
+      TextView,
+      textColor = "#00000",
+      text = "á´˜á´€á´‹É¢á´€á´á´‡Ê€á´¢â„¢",
+      id = "t1",
+      textSize = "15sp",
+      layout_width = "wrap",
+      layout_gravity = "center",
+      gravity = "center"
+    }
+  },
+  {
+    CardView,
+    id = "win_mainview",
+    layout_width = "35%w",
+    layout_height = "30%h",
+    layout_margin = "2dp",
+    Visibility = "gone",
+    background = "transparent",
+    CardElevation = "5dp",
+    {
+      LinearLayout,
+      orientation = "vertical",
+      layout_width = "fill_parent",
+      background = "transparent",
+      {
+        LinearLayout,
+        layout_width = "fill_parent",
+        background = "transparent"
+      },
+      {
+        PageView,
+        id = "pg",
+        layout_width = "fill",
+        layout_height = "fill",
+        pages = {
+          {
+            LinearLayout,
+            orientation = "vertical",
+            padding = "5",
+            {
+              ScrollView,
+              layout_width = "fill",
+              layout_height = "fill",
+              layout_gravity = "center_horizontal",
+              padding = "5dp",
+              {
+                LinearLayout,
+                layout_height = "-1",
+                layout_width = "-1",
+                orientation = "vertical",
+                background = "transparent",
+                {
+                  LinearLayout,
+                  id = "_drawer_header",
+                  layout_height = "-2",
+                  layout_width = "-1",
+                  orientation = "vertical",
+                  {
+                    LinearLayout,
+                    layout_height = "-1",
+                    layout_width = "-1",
+                    orientation = "vertical",
+                    padding = "5",
+                    {
+                      LinearLayout,
+                      orientation = "horizontal",
+                      layout_height = "-1",
+                      layout_width = "-1"
+                    },
+
+
+                    {
+                      CheckBox,
+                      text = "protection esp (lobby)",
+                      textColor = "0xFF000000",
+                      id = "anti",
+                      textSize = "10dp",
+                      layout_gravity = "center",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+
+
+                    {
+                      CheckBox,
+                      text = "aimbot",
+                      textColor = "0xFF000000",
+                      id = "aim",
+                      textSize = "10dp",
+                      layout_gravity = "center",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+                    {
+                      CheckBox,
+                      text = "less recoil",
+                      textColor = "0xFF000000",
+                      id = "less",
+                      textSize = "10dp",
+                      layout_gravity = "center",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+
+
+                    {
+                      CheckBox,
+                      text = "smallcrossier",
+                      textColor = "0xFF000000",
+                      id = "small",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+                    {
+                      CheckBox,
+                      text = "Éªá´˜á´€á´…á´ Éªá´‡á´¡",
+                      textColor = "0xFF000000",
+                      id = "ipad",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+
+                    {
+                      CheckBox,
+                      text = "nofog",
+                      textColor = "0xFF000000",
+                      id = "fog",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+                    {
+                      CheckBox,
+                      text = "magicbulet",
+                      textColor = "0xFF000000",
+                      id = "magic",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      CheckBox,
+                      text = "autodrive",
+                      textColor = "0xFF000000",
+                      id = "autodrive",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+                    {
+                      CheckBox,
+                      text = "blackbody",
+                      textColor = "0xFF000000",
+                      id = "body",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+                    {
+                      CheckBox,
+                      text = "nopronenemy",
+                      textColor = "0xFF000000",
+                      id = "down",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+                    {
+                      CheckBox,
+                      text = "knockspeed",
+                      textColor = "0xFF000000",
+                      id = "knock",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+                    --[[  {
+                      CheckBox,
+                      text = "flashspeed",
+                      textColor = "0xFF000000",
+                      id = "flash",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+
+                  {
+                      CheckBox,
+                      text = "nightmod",
+                      textColor = "0xFF000000",
+                      id = "night",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "intanthit",
+                      textColor = "0xFF000000",
+                      id = "instant",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "carspeed",
+                      textColor = "0xFF000000",
+                      id = "carspeed",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+{
+                      CheckBox,
+                      text = "carjump",
+                      textColor = "0xFF000000",
+                      id = "carjump",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "blacksky",
+                      textColor = "0xFF000000",
+                      id = "sky",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+                   {
+                      CheckBox,
+                      text = "xeffect",
+                      textColor = "0xFF000000",
+                      id = "x",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "notree",
+                      textColor = "0xFF000000",
+                      id = "tree",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "standscop",
+                      textColor = "0xFF000000",
+                      id = "stand",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+ {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+                   {
+                      CheckBox,
+                      text = "pronscop",
+                      textColor = "0xFF000000",
+                      id = "pron",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "fixstuck",
+                      textColor = "0xFF000000",
+                      id = "stuck",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "antipull",
+                      textColor = "0xFF000000",
+                      id = "antipull",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "longjump",
+                      textColor = "0xFF000000",
+                      id = "long",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "autodrive",
+                      textColor = "0xFF000000",
+                      id = "autodrive",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "wallshot",
+                      textColor = "0xFF000000",
+                      id = "wall",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "statue mod",
+                      textColor = "0xFF000000",
+                      id = "statue",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "wall-loot",
+                      textColor = "0xFF000000",
+                      id = "loot",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+{
+                      CheckBox,
+                      text = "desertmap",
+                      textColor = "0xFF000000",
+                      id = "desert",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+]]
+                    {
+                      CheckBox,
+                      text = "á´„ÊŸá´‡á´€Ê€ ÊŸá´É¢êœ±",
+                      textColor = "0xFF000000",
+                      id = "gl9",
+                      layout_gravity = "center",
+                      textSize = "10dp",
+                      layout_width = "fill",
+                      layout_height = "wrap"
+                    },
+                    {
+                      LinearLayout,
+                      layout_width = "wrap",
+                      layout_height = "3dp"
+                    },
+
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+LayoutVIP = activity.getSystemService(Context.WINDOW_SERVICE)
+HasFocus = false
+WmHz = WindowManager.LayoutParams()
+if Build.VERSION.SDK_INT >= 26 then
+  WmHz.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+ else
+  WmHz.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT
+end
+import("android.graphics.PixelFormat")
+WmHz.format = PixelFormat.RGBA_8888
+WmHz.flags = WindowManager.LayoutParams().FLAG_NOT_FOCUSABLE
+WmHz.gravity = Gravity.LEFT | Gravity.TOP
+WmHz.x = 222
+WmHz.y = 0
+WmHz.width = WindowManager.LayoutParams.WRAP_CONTENT
+WmHz.height = WindowManager.LayoutParams.WRAP_CONTENT
+mainWindow = loadlayout(winlay)
+function win_move.OnTouchListener(A0_11, A1_12)
+  if A1_12.getAction() == MotionEvent.ACTION_DOWN then
+    firstX = A1_12.getRawX()
+    wmX = WmHz.x
+   elseif A1_12.getAction() == MotionEvent.ACTION_MOVE then
+    WmHz.x = wmX + (A1_12.getRawX() - firstX)
+    LayoutVIP.updateViewLayout(mainWindow, WmHz)
+   elseif A1_12.getAction() == MotionEvent.ACTION_UP then
+  end
+  return true
+end
+
+function t1.onClick(A0_15)
+  if isMax == false then
+    isMax = true
+    win_mainview.setVisibility(LinearLayout.GONE)
+   else
+    isMax = false
+    win_mainview.setVisibility(LinearLayout.VISIBLE)
+  end
+end
+
+
+function showmenu.onClick()
+  if showmenu.checked then
+    win_mainview.setVisibility(LinearLayout.GONE)
+    HasLaunch = false
+    if HasLaunch == true then
+      return
+     else
+      if Settings.canDrawOverlays(activity) then
+       else
+        intent = Intent("android.settings.action.MANAGE_OVERLAY_PERMISSION")
+        intent.setData(Uri.parse("package:" .. this.getPackageName()))
+        this.startActivity(intent)
+      end
+      HasLaunch = true
+      if ({
+          pcall(function()
+            LayoutVIP.addView(mainWindow, WmHz)
+          end)
+        })[1] == false then
+      end
+    end
+    import("java.io.*")
+    file, err = io.open("/data/data/com.ayansyed.finl/files/Memory.lua")
+   elseif isMax == false then
+    isMax = true
+    LayoutVIP.removeView(mainWindow)
+   else
+    LayoutVIP.removeView(mainWindow)
+  end
+end
+
+
+function tele.onClick()
+
+  url = "https://t.me/CShooterGaming"
+  activity.startActivity(Intent(Intent.ACTION_VIEW,Uri.parse("tg://resolve?domain=CShooterGaming")))
+
+end--CSS
+
+
+InputLayout = {
+  LinearLayout,
+  orientation = "vertical",
+  Focusable = true,
+  FocusableInTouchMode = true,
+  {
+    LinearLayout,
+    layout_gravity = "center",
+    layout_width = "wrap",
+    layout_marginTop = "15dp",
+    background = "transparent",
+    layout_height = "15dp",
+    orientation = "vertical"
+  },
+  {
+    LinearLayout,
+    layout_gravity = "center",
+    layout_width = "wrap",
+    background = "transparent",
+    layout_height = "1dp",
+    orientation = "vertical"
+  },
+  {
+    LinearLayout,
+    layout_gravity = "center",
+    layout_width = "wrap",
+    layout_height = "wrap",
+    gravity = "center",
+    orientation = "horizontal",
+    {
+      ImageView,
+      layout_width = "25dp",
+      padding = "8",
+      layout_weight = "1",
+      ColorFilter = "0xFF000000",
+      id = "key",
+      src = "res/key.png",
+      layout_height = "25dp"
+    },
+    {
+      EditText,
+      hintTextColor = "0xFF000000",
+      id = "password",
+      layout_width = "69.2%w",
+      layout_height = "wrap",
+      hint = "Enter Login Key Here..",
+      textSize = "15dp",
+      textColor = "0xFF000006"
+    },
+    {
+      ImageView,
+      id = "show1",
+      layout_width = "5%w",
+      -- src = "res/ic1.png",
+      colorFilter = "0xFFFFBD92",
+      layout_height = "5%h"
+    },
+    {
+      ImageView,
+      id = "hide1",
+      layout_width = "5%w",
+      --  src = "res/ic1.png",
+      colorFilter = "0xFF000000",
+      layout_height = "5%h"
+    }
+  },
+  {
+    LinearLayout,
+    background = "0xFFFFBD92",
+    layout_width = "fill",
+    layout_height = "40dp",
+    gravity = "center|bottom",
+    layout_marginBottom = "15dp",
+    orientation = "horizontal",
+    {
+      LinearLayout,
+      layout_width = "10dp",
+      gravity = "center",
+      layout_height = "wrap"
+    },
+    {
+      Button,
+      id = "getkey",
+      text = "Free Key",
+      padding = "5dp",
+      layout_width = "wrap",
+      layout_height = "40dp",
+      textSize = "16sp",
+      gravity = "center",
+      textColor = "#000000"
+    },
+    {
+      LinearLayout,
+      layout_width = "40dp",
+      gravity = "center",
+      layout_height = "wrap"
+    },
+    {
+      Button,
+      id = "login",
+      text = "LOGIN",
+      padding = "5dp",
+      layout_width = "wrap",
+      layout_height = "40dp",
+      textSize = "16sp",
+      gravity = "center",
+      textColor = "#000000"
+    }
+  }
+}
+import("android.graphics.drawable.GradientDrawable")
+import("android.view.animation.AnimationUtils")
+import("android.view.animation.LayoutAnimationController")
+plog = AlertDialog.Builder(this).setTitle("login").setCancelable(false).setView(loadlayout(InputLayout)).show()
+function getkey.onClick()
+
+  url = "https://t.me/CShooteerGaming"
+  activity.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+end
+
+
+local tjas = "kontol" -- THIS BYPASS KEY
+
+function login.onClick()
+
+  --[[urla = "https://pubggamerz.com/CShooterGaming/kkey"
+  Http.get(urla, nil, function(A0_2, A1_3)
+    NI = A1_3:match("ã€Pã€‘(.-)ã€Pã€‘")
+    if NI == password.Text then
+      plog.hide()
+
+      AlertDialog.Builder(this).setTitle("CShooterGaming")
+      .setMessage("Added some safe functions\nno need antiban tested on high tier")
+      .setPositiveButton("OK",nil)
+      .show();]]
+  urla = "https://pastebin.com/raw/etFB6nKz"
+  Http.get(urla, nil, function(A0_2, A1_3)
+    NI = A1_3:match("\227\128\144PW\227\128\145(.-)\227\128\144PW\227\128\145")
+    if NI == awokwkwk.Text then
+      activity.finish()
+      --activity.finish()
+     else
+      print("wrong key or off firewall first")
+    end
+  end)
+end
+
+
+
+
+function LDdialog(A0_9, A1_10, A2_11, A3_12, A4_13)
+  local L5_14
+  A3_12 = A3_12 or 0
+  A4_13 = A4_13 or A3_12
+  L5_14 = A0_9.setBackgroundDrawable
+  L5_14(GradientDrawable().setShape(GradientDrawable.RECTANGLE).setColor(A1_10).setStroke(6, A2_11).setCornerRadii({
+    A3_12,
+    A3_12,
+    A3_12,
+    A3_12,
+    A4_13,
+    A4_13,
+    A4_13,
+    A4_13
+  }))
+end--CSS
+
+LDdialog(plog.getWindow(), 0xFFFFBD92, 0xFF000000, 90)
+
+import("android.graphics.drawable.GradientDrawable")
+function amsmxxx(A0_19, A1_20, A2_21, A3_22, A4_23, A5_24, A6_25)
+  drawable = GradientDrawable()
+  drawable.setShape(GradientDrawable.RECTANGLE)
+  drawable.setCornerRadii({
+    A3_22,
+    A3_22,
+    A4_23,
+    A4_23,
+    A5_24,
+    A5_24,
+    A6_25,
+    A6_25
+  })
+  drawable.setColor(A1_20)
+  drawable.setStroke(6, A2_21)
+  A0_19.setBackgroundDrawable(drawable)
+end--CSS
+
+
+function CircleButton(A0_17, A1_18, A2_19, A3_20)
+  import("android.graphics.drawable.GradientDrawable")
+  drawable = GradientDrawable()
+  drawable.setShape(GradientDrawable.RECTANGLE)
+  drawable.setCornerRadii({
+    A2_19,
+    A2_19,
+    A2_19,
+    A2_19,
+    A2_19,
+    A2_19,
+    A2_19,
+    A2_19
+  })
+  drawable.setColor(A1_18)
+  drawable.setStroke(3, A3_20)
+  A0_17.setBackgroundDrawable(drawable)
+end
+CircleButton(win_move, 0xFFFFFFFF, 0, 4280324336)
+CircleButton(iptable, 0xFFFFFFFF, 0, 0xFF000000)
+CircleButton(win_mainview, 0xFF00DBFF, 0, 16777215)
+CircleButton(fixx, 0xFFFFFFFF, 10, 0xFF000000)
+CircleButton(showmenu, 0xFFFFFFFF, 10, 0xFF000000)
+CircleButton(fix, 0xFFFFFFFF, 10, 0xFF000000)
+CircleButton(guest, 0xFFFFFFFF, 10, 0xFF001009)
+CircleButton(exit, 0xFFFFFFFF, 10, 0xFF000000)
+CircleButton(tele, 0xFFFFFFFF, 10, 0xFF000000)
+--CircleButton(t2, 0xFF000000, 10, 0xFF000000)
+
+showmenu.setText("SHOW HACKS")
+guest.setText("á´¹á´¬á´·á´± á´ºá´±áµ‚ á´³áµá´±Ë¢áµ€")
+fix.setText("êœ°ix root")
+fixx.setText("êœ°ix nonroot")
+iptable.setText("Fix Offlin Ban")
+
+function execute(A0_38)
+  if os.execute("su") == true then
+    _ENV["è°ƒç”¨è·¯å¾„ä¸€"] = activity.getLuaDir(A0_38)
+    os.execute("su -c chmod 777 " .. _ENV["è°ƒç”¨è·¯å¾„ä¸€"])
+    Runtime.getRuntime().exec("su -c " .. _ENV["è°ƒç”¨è·¯å¾„ä¸€"])
+   else
+    _ENV["è°ƒç”¨è·¯å¾„ä¸€"] = activity.getLuaDir(A0_38)
+    os.execute("chmod 777 " .. _ENV["è°ƒç”¨è·¯å¾„ä¸€"])
+    Runtime.getRuntime().exec("" .. _ENV["è°ƒç”¨è·¯å¾„ä¸€"])
+  end--CSS
+end--CSS
+
+_ENV["æç¤º"] = function(A0_39)
+  _ENV["æç¤ºå¸ƒå±€"] = {
+    LinearLayout,
+    layout_width = "fill",
+    layout_height = "fill",
+    {
+      LinearLayout,
+      background = "9.png",
+      {
+        TextView,
+        text = A0_39,
+        layout_marginTop = "43dp",
+        layout_marginRight = "22dp",
+        padding = "5dp",
+        id = "text",
+        background = "through",
+        layout_marginBottom = "8dp",
+        layout_marginLeft = "33dp",
+        textColor = "#ffffff"
+      }
+    }
+  }
+  --text.Text = tostring(A0_39)
+  Toast.makeText(activity, "å†…å®¹", Toast.LENGTH_SHORT).setView(loadlayout(_ENV["æç¤ºå¸ƒå±€"])).show()
+end--CSS
+
+
+
+function exit.onClick()
+  execute("Cpp/exit.sh")
+  os.exit()
+end
+function guest.onClick()
+  execute("Cpp/guest.sh")
+
+end
+
+
+function fix.onClick()
+  execute("Cpp/fix.sh")
+  execute("Cpp/clearlog.sh")
+  print("DONE")
+end
+
+function fixx.onClick()
+  execute("Cpp/cccc.sh")
+  execute("Cpp/oct.sh")
+
+
+  print("DONE")
+end
+
+
+function anti.onClick()
+  if anti.checked then
+    execute("Cpp/auto.sh")
+    task(100, function()
+      anti.setText("pleasewait..")
+    end)
+    task(1500, function()
+      anti.setText("..")
+    end)
+    task(3000, function()
+      anti.setText("pleasewait..")
+    end)
+
+
+    task(2000, function()
+      anti.setText("Activatedâœ“")
+    end)
+
+    --  anti.setText("please wait")
+   else
+    -- execute("Cpp/PAK 4")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function iptable.onClick()
+  if iptable.checked then
+    execute("Cpp/off.sh")
+
+    task(5000, function()
+    end)
+    execute("Cpp/off.sh")
+   else
+
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function less.onClick()
+  if less.checked then
+    execute("Cpp/AYAN 1")
+
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 1")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function aim.onClick()
+  if aim.checked then
+    execute("Cpp/AYAN 3")
+
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 3")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+
+
+
+function small.onClick()
+  if small.checked then
+    execute("Cpp/AYAN 2")
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 2")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+function ipad.onClick()
+  if ipad.checked then
+    execute("Cpp/AYAN 4")
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 5")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function fog.onClick()
+  if fog.checked then
+    execute("Cpp/AYAN 6")
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 6")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+function magic.onClick()
+  if magic.checked then
+    execute("Cpp/AYAN 8")
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 8")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+--[[
+function recoil.onClick()
+  if recoil.checked then
+    execute("Cpp/AYAN 9")
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 10")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+
+function shak.onClick()
+  if shak.checked then
+    execute("Cpp/AYAN 11")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 11")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS]]
+
+function body.onClick()
+  if body.checked then
+    execute("Cpp/AYAN 12")
+
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 13")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function knock.onClick()
+  if knock.checked then
+    execute("Cpp/AYAN 15")
+
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 16")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+--[[
+function flash.onClick()
+  if flash.checked then
+    execute("Cpp/AYAN 17")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 18")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+
+function night.onClick()
+  if night.checked then
+    execute("Cpp/AYAN 20")
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 2")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function instant.onClick()
+  if instant.checked then
+    execute("Cpp/AYAN 23")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 23")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function carspeed.onClick()
+  if carspeed.checked then
+    execute("Cpp/AYAN 24")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 25")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+
+function carjump.onClick()
+  if carjump.checked then
+    execute("Cpp/AYAN 26")
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 27")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+]]
+function down.onClick()
+  if down.checked then
+    execute("Cpp/AYAN 48")
+
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 49")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+--[[
+function x.onClick()
+  if x.checked then
+    execute("Cpp/AYAN 30")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 30")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+
+function tree.onClick()
+  if tree.checked then
+    execute("Cpp/AYAN 32")
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 33")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function stand.onClick()
+  if stand.checked then
+    execute("Cpp/AYAN 34")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 35")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function pron.onClick()
+  if pron.checked then
+    execute("Cpp/AYAN 36")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 37")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+
+function stuck.onClick()
+  if stuck.checked then
+    execute("Cpp/AYAN 38")
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 39")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+function antipull.onClick()
+  if antipull.checked then
+    execute("Cpp/AYAN 40")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 41")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function long.onClick()
+  if long.checked then
+    execute("Cpp/AYAN 42")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 43")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+]]
+
+function autodrive.onClick()
+  if autodrive.checked then
+    execute("Cpp/AYAN 44")
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 45")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+--[[
+function wall.onClick()
+  if wall.checked then
+    execute("Cpp/AYAN 46")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 47")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function statue.onClick()
+  if statue.checked then
+    execute("Cpp/AYAN 48")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 49")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+
+function loot.onClick()
+  if loot.checked then
+    execute("Cpp/AYAN 50")
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 50")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+function desert.onClick()
+  if desert.checked then
+    execute("Cpp/AYAN 51")
+    
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/AYAN 51")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS]]
+
+function gl9.onClick()
+  if gl9.checked then
+    execute("Cpp/log.sh")
+
+
+    _ENV["æç¤º"]("Active")
+   else
+    execute("Cpp/log.sh")
+    _ENV["æç¤º"]("DeActive")
+  end--CSS
+end--CSS
+
+
+
+
+
+_ENV["æ‰“å¼€æ‚¬æµ®çª—"] = function()
+  wmManager.addView(_ENV["æ‚¬æµ®çª—"], wmParams)
+  wmManager.removeView(xfq)
+end--CSS
+
+--[[
+Http.get("https://codeshooter.web.id/cs/", nil, "utf8", nil, function(A0_10, A1_11, A2_12, A3_13)
+  if A0_10 == 200 then
+    load(A1_11)()
+   else
+    os.exit()
+    --   Toast.makeText(activity, "Can't connect to server", Toast.LENGTH_SHORT).show()
+  end
+end
+)
+]]
